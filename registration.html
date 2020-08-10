@@ -3,7 +3,7 @@ Session_start();
 ?>
 <fieldset>
     <legend><b>REGISTRATION</b></legend>
-    <form>
+    <form action="registration_handler.php" method="post">
         <br/>
         <table width="100%" cellpadding="0" cellspacing="0">
             <tr>
@@ -26,7 +26,7 @@ Session_start();
             <tr>
                 <td>User Name</td>
                 <td>:</td>
-                <td><input name="userName" type="text"></td>
+                <td><input name="username" type="text"></td>
                 <td></td>
             </tr>
             <tr><td colspan="4"><hr/></td></tr>
@@ -40,7 +40,7 @@ Session_start();
             <tr>
                 <td>Confirm Password</td>
                 <td>:</td>
-                <td><input name="confirmPassword" type="password"></td>
+                <td><input name="confirmpassword" type="password"></td>
                 <td></td>
             </tr>
             <tr><td colspan="4"><hr/></td></tr>
@@ -60,9 +60,9 @@ Session_start();
                 <td colspan="3">
                     <fieldset>
                         <legend>Date of Birth</legend>
-                        <input type="text" size="2" />/
-                        <input type="text" size="2" />/
-                        <input type="text" size="4" />
+                        <input type="text" size="2"  name="dd"/>/
+                        <input type="text" size="2"  name ="mm"/>/
+                        <input type="text" size="4" name="yy"/>
                         <font size="2"><i>(dd/mm/yyyy)</i></font>
                     </fieldset>
                 </td>

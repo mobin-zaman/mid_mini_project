@@ -1,13 +1,15 @@
 <?php
 
+
 include ('db_connection.php');
 
-    if(isset($_POST['name']) &&
-    isset($_POST['email']) &&
-    isset($_POST['username']) &&
-    isset($_POST['password']) &&
-    isset($_POST['confirmpassword']) &&
-    isset($_POST['gender']) &&
+if($_REQUEST['method'] == 'POST') {
+    if (isset($_POST['name']) &&
+        isset($_POST['email']) &&
+        isset($_POST['username']) &&
+        isset($_POST['password']) &&
+        isset($_POST['confirmpassword']) &&
+        isset($_POST['gender']) &&
         isset($_POST['dd']) && isset($_POST['mm']) && isset($_POST['yy'])
     ) {
 
@@ -17,6 +19,7 @@ include ('db_connection.php');
     } else {
         die("you need to provide all the information");
     }
+}
 
 
     function signup($name, $email, $username, $password,$confirmpassword, $gender, $dd, $mm, $yy) {

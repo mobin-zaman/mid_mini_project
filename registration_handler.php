@@ -12,7 +12,7 @@ include ('db_connection.php');
     ) {
 
         signup($_POST['name'], $_POST['email'], $_POST['username'], $_POST['password'], $_POST['confirmpassword'], $_POST['gender'], $_POST['dd'], $_POST['yy'], $_POST['mm']);
-        
+
 
     } else {
         die("you need to provide all the information");
